@@ -1,14 +1,17 @@
-package TryCatchFinally;
+package TratamentoDados;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class TryCatchFinally {
     public static void main(String[] args) {
+
         //Declarações
         String str = "null"; // Null não possui posição de memória alocada
         String s ="ABC";
         int x;
         int a;
+
         //Instância do objeto scanner
         Scanner sc = new Scanner(System.in);
 
@@ -32,16 +35,17 @@ public class TryCatchFinally {
 
             // Catch recebe como parametro o nome do erro apresentado e logo após, nós nomeamos o nome dessa função catch,
             // neste caso, escolhemos npe como nome
+
         }catch (NullPointerException npe){
             System.err.println("A variável não possui valor atribuido");
         }catch (ArithmeticException ae){
             System.err.println("Não é possível realizar uma divisão por 0.");
         }catch (IndexOutOfBoundsException siobe){
             System.out.println("Acesso negado,posição de memória inválida.");
-        }catch (Exception e){
+        }catch (InputMismatchException ime){
             System.out.println("Informe um número inteiro. ");
         }finally {
-            System.out.println("Executando o finally");
+            System.out.println("Fechando o programa...");
         }
     }
 }

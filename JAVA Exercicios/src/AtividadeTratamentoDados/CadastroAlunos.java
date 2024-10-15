@@ -1,4 +1,4 @@
-package CadastroAlunos;
+package AtividadeTratamentoDados;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
@@ -6,12 +6,12 @@ import java.util.Scanner;
 public class CadastroAlunos {
     public static void main(String[] args) {
         //Trate exceções ao lidar com entradas inválidas.
+
         try{
-            System.out.println("Quantos alunos você deseja cadastrar? ");
             Scanner sc = new Scanner(System.in);
+            System.out.println("Quantos alunos você deseja cadastrar? ");
             int qtdalunos = sc.nextInt();
 
-            //Declarando vetores:
             int idades[] = new int[qtdalunos];
             String nomes[] = new String[qtdalunos];
             double medias[] = new double[qtdalunos];
@@ -23,7 +23,7 @@ public class CadastroAlunos {
                 String nome = sc.next();
                 nomes[i-1] = nome;
 
-                System.out.println("Digite a idade do aluno "+i+" (Utilize números inteiros).");
+                System.out.println("Digite a idade do aluno "+i);
                 int idade = sc.nextInt();
                 idades[i-1] = idade;
 
@@ -38,7 +38,7 @@ public class CadastroAlunos {
             }
 
         }catch (InputMismatchException ime){
-            System.out.println("Informe um número válido.");
+            System.out.println("Insira dados válidos");
         }
     }
 }
