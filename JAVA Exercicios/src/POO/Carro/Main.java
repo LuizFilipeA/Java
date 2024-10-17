@@ -1,4 +1,4 @@
-package POO.Carros;
+package POO.Carro;
 
 public class Main {
     public static void main(String[] args) {
@@ -10,7 +10,7 @@ public class Main {
         Carro c1 = new Carro();
         c1.setModelo("Celta");
         c1.setAno(2008);
-        c1.setMarca("Fiat"); /// Atributo a ser alterado para teste
+        c1.setMarca("GM"); /// Atributo a ser alterado para teste
 
         /// Testando alteração
         System.out.println("Testando alteração:");
@@ -27,6 +27,12 @@ public class Main {
         c2.setMarca("Honda");
         c2.setAno(2024);
         c2.infocarro();
+
+        Carro c3 = new Carro();
+        c3.setModelo("Palio");
+        c3.setMarca("Fiat");
+        c3.setAno(1999);
+        c3.infocarro();
 
     }
 }
