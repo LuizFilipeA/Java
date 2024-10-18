@@ -1,4 +1,4 @@
-package POO.Computador;
+package POO.GettersSetters;
 
 public class Funcionario {
 

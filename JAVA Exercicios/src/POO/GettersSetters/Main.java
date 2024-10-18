@@ -1,12 +1,9 @@
-package POO.Computador;
+package POO.GettersSetters;
+
 import java.util.Scanner;
 
-public class main {
+public class Main {
     public static void main(String[] args) {
-        //Criando computador 1 e utilizando o metodo ligar()
-        Computador pc1 = new Computador();
-        pc1.ligar();
-
         //Criando funcionário 1 e exibindo o metodo ola()
         Funcionario f1 = new Funcionario();
         f1.ola();
