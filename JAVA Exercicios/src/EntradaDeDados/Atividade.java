@@ -6,27 +6,27 @@ public class Atividade {
         String nomeUsuario = "Joao";
         System.out.println("Nome de usuário: " + nomeUsuario);
 
-        //b) CPF (inteiro)
-        String cpf ="12345678900";
-        System.out.println("CPF: " + cpf); // Não consegui exibir a saída de dados de números maiores
+        //b) CPF (long)
+        long cpf =12345678900l;
+        System.out.println("CPF: " + cpf);
 
-        //c) Salário (float)
-        float salario = 15678.55f;
+        //c) Salário (double)
+        double salario = 15678.55;
         System.out.println("Salário R$: " + salario);
 
         //d) Telefone (int)
-        String telefone = "11123456789";
+        long telefone = 11123456789l;
         System.out.println("Número de telefone: " + telefone);
 
         //e) e-mail (String)
         String email = "email@email.com";
         System.out.println("Email: " + email);
 
-        //f) Whatsapp (int)
+        //f) Whatsapp (long)
         String whatsapp = "11123456789";
         System.out.println("Whatsapp : " + whatsapp);
 
-        //g) Profissão (int)
+        //g) Profissão (String)
         String profissao = "Desenvolvedor Java";
         System.out.println("Profissão : " + profissao);
 
