@@ -1,32 +1,26 @@
-
 package POO.Atividade.Biblioteca;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-
-
 //Implemente métodos para adicionar e remover livros da
 //biblioteca, registrar empréstimos e devoluções
 
-
-public class Livro{
+public class Livro extends Usuario {
     //Atributos
     protected String nomeLivro;
     protected String nomeAutor;
     protected int quantidade;
-    protected long id =0;
-
+    protected long id = 0;
 
     //Lista utilizada pra armazenar os livros
     List<Livro> livros = new ArrayList<>();
 
     //Gerador de ID
-    protected long gerarId(){
-        this.id = this.id +1;
+    protected long gerarId() {
+        this.id = this.id + 1;
         return this.id;
     }
-
 
     //Setters
     protected void setNomeLivro(String nomeLivro) {
@@ -38,10 +32,9 @@ public class Livro{
     protected void setQuantidade(int quantidade) {
         this.quantidade = quantidade;
     }
-    protected void setId(long id) {
+    public void setId(long id) {
         this.id = id;
     }
-
 
     // Getters
     public String getNomeLivro() {
@@ -59,7 +52,7 @@ public class Livro{
 
 
     //Adicionar livro
-    protected void adicionarLivro(){
+    protected void adicionarLivro() {
         System.out.println("Adicionar livro");
         Scanner sc = new Scanner(System.in);
         Livro atual = new Livro();
@@ -76,29 +69,38 @@ public class Livro{
 
 
     //Exibir livros
-    protected void exibirLivros() {
+    public void exibirLivros() {
         System.out.println("Livros disponíveis: ");
-        // Para cada "livro" da classe "Livro" dentro da lista de "livros"
-        for (Livro livro: livros){
-            System.out.println("ID:"+livro.getId()+" Livro:" +livro.getNomeLivro()+ " Autor:" + livro.getNomeAutor() + " Qntd.Disponível:" + livro.getQuantidade());
+        for (Livro livro : this.livros) {
+            System.out.println("ID:" + livro.getId() + " Livro:" + livro.getNomeLivro() + " Autor:" + livro.getNomeAutor() + " Qntd.Disponível:" + livro.getQuantidade());
         }
     }
 
-
     //Remover livro
-    protected void removerLivro(){
+    protected void removerLivro() {
         Scanner sc = new Scanner(System.in);
         System.out.println("Qual o id do livro a ser removido?");
         long id = sc.nextLong();
-        for (Livro livro: livros){
-            if (livro.id == id){
+        for (Livro livro : livros) {
+            if (livro.id == id) {
                 livros.remove(livro);
                 System.out.println("Livro removido com sucesso");
                 break;
-            }else{
-                System.out.println("ID não encontrado");;
+            } else {
+                System.out.println("ID não encontrado");
             }
         }
     }
 
+
+    //Pegar livro emprestado
+    public void pegarEmprestado(){
+        exibirLivros();
+        System.out.println("Empréstimo: ");
+        if(verificadorIdSenha() == true){
+            System.out.println("Pegando emprestado");
+        }else{
+            System.out.println("O empréstimo nao pode ser feito");
+        }
+    }
 }
