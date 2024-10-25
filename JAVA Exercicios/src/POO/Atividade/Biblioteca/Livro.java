@@ -1,7 +1,14 @@
+
 package POO.Atividade.Biblioteca;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+
+
+
+//Implemente métodos para adicionar e remover livros da
+//biblioteca, registrar empréstimos e devoluções
+
 
 public class Livro{
     //Atributos
@@ -12,8 +19,7 @@ public class Livro{
 
 
     //Lista utilizada pra armazenar os livros
-    public List<Livro> livros = new ArrayList<>();
-
+    List<Livro> livros = new ArrayList<>();
 
     //Gerador de ID
     protected long gerarId(){
@@ -51,15 +57,17 @@ public class Livro{
         return this.id;
     }
 
+
     //Adicionar livro
-    protected void adicionarLivro() {
+    protected void adicionarLivro(){
+        System.out.println("Adicionar livro");
         Scanner sc = new Scanner(System.in);
         Livro atual = new Livro();
         System.out.println("Digite o nome do livro: ");
         atual.setNomeLivro(sc.nextLine());
         System.out.println("Qual o nome do autor de " + atual.getNomeLivro() + "?");
         atual.setNomeAutor(sc.nextLine());
-        System.out.println("Quantas unidades de " + atual.getNomeLivro() + " você quer doar?");
+        System.out.println("Quantas unidades de " + atual.getNomeLivro() + " você quer emprestar?");
         atual.setQuantidade(sc.nextInt());
         atual.setId(gerarId());
         System.out.println("Livro adicionado com sucesso!");
