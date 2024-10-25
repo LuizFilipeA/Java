@@ -9,13 +9,19 @@ public class Livro{
     protected String nomeAutor;
     protected int quantidade;
     protected long id =0;
+
+
     //Lista utilizada pra armazenar os livros
     public List<Livro> livros = new ArrayList<>();
 
+
+    //Gerador de ID
     protected long gerarId(){
         this.id = this.id +1;
         return this.id;
     }
+
+
     //Setters
     protected void setNomeLivro(String nomeLivro) {
         this.nomeLivro = nomeLivro;
@@ -29,6 +35,7 @@ public class Livro{
     protected void setId(long id) {
         this.id = id;
     }
+
 
     // Getters
     public String getNomeLivro() {
@@ -59,12 +66,30 @@ public class Livro{
         this.livros.add(atual);
     }
 
+
     //Exibir livros
     protected void exibirLivros() {
         System.out.println("Livros disponíveis: ");
         // Para cada "livro" da classe "Livro" dentro da lista de "livros"
         for (Livro livro: livros){
             System.out.println("ID:"+livro.getId()+" Livro:" +livro.getNomeLivro()+ " Autor:" + livro.getNomeAutor() + " Qntd.Disponível:" + livro.getQuantidade());
+        }
+    }
+
+
+    //Remover livro
+    protected void removerLivro(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Qual o id do livro a ser removido?");
+        long id = sc.nextLong();
+        for (Livro livro: livros){
+            if (livro.id == id){
+                livros.remove(livro);
+                System.out.println("Livro removido com sucesso");
+                break;
+            }else{
+                System.out.println("ID não encontrado");;
+            }
         }
     }
 
