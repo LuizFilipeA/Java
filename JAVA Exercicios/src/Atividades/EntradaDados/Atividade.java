@@ -1,4 +1,4 @@
-package EntradaDeDados;
+package Atividades.EntradaDados;
 
 public class Atividade {
     public static void main(String[] args) {

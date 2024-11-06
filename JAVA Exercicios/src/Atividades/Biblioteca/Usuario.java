@@ -1,4 +1,4 @@
-package Atividades;
+package Atividades.Biblioteca;
 
 public class Usuario {
     //Atributos

@@ -1,4 +1,4 @@
-package Atividades;
+package Atividades.Biblioteca;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -62,10 +62,10 @@ public class Livro {
     public void setDisponivel(boolean disponivel) {
         this.disponivel = disponivel;
     }
-    public Atividades.Usuario getUsuario() {
+    public Atividades.Biblioteca.Usuario getUsuario() {
         return Usuario;
     }
-    public void setUsuario(Atividades.Usuario usuario) {
+    public void setUsuario(Atividades.Biblioteca.Usuario usuario) {
         Usuario = usuario;
     }
 
