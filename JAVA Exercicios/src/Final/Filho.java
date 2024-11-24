@@ -11,5 +11,5 @@ public class Filho extends Pai{
         super.Mensagem2();
     }
 
-    mensagem(){} //metodo da classe pai com final (irreconhecível)
+    //mensagem(){} //metodo da classe pai com final (irreconhecível)
 }
