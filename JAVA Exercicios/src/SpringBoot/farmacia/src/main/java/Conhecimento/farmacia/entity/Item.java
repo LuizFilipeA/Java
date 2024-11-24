@@ -6,8 +6,10 @@ import javax.persistence.Id;
 
 public class Item {
 
+    //Anotação (@) de id
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY) //Gerador de id do próprio spring boot, não é necessário um algoritmo pra incrementar id.
+    //Atributos da classe Item
     private Long id;
     private String name;
     private String description;
