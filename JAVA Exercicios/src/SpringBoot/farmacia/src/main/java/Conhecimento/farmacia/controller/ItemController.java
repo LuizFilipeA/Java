@@ -10,7 +10,7 @@ import java.util.Optional;
 
 //· GET. · PUT. · POST. · DELETE. · PATCH. · HEAD. · OPTIONS. · TRACE. São os métodos do protocolo http.
 
-//Indicando ao spring boot que é uma classe de controller de aplicação rest e que irá controlar as rotas da aplicação
+//@RestController - Indicando ao spring boot que é uma classe de controller de aplicação rest e que irá controlar as rotas da aplicação
 @RestController
 @RequestMapping("/api/items")
 public class ItemController {
