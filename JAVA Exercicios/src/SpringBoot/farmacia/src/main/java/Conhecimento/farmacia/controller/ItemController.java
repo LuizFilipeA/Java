@@ -8,9 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.Optional;
 
-//· GET. · PUT. · POST. · DELETE. · PATCH. · HEAD. · OPTIONS. · TRACE. São os métodos do protocolo http.
-
-//@RestController - Indicando ao spring boot que é uma classe de controller de aplicação rest e que irá controlar as rotas da aplicação
+//Controlador rest, criando rota na url "/api/items "
 @RestController
 @RequestMapping("/api/items")
 public class ItemController {
@@ -19,31 +17,27 @@ public class ItemController {
     private ItemService itemService;
 
     @GetMapping
-    public List <Item> getAllItems(){
+    public List<Item> getAllItems() {
         return itemService.getAllItems();
     }
 
     @GetMapping("/{id}")
-    public Optional<Item> getItemById(@PathVariable Long id){
+    public Optional<Item> getItemById(@PathVariable Long id) {
         return itemService.getItemById(id);
     }
 
     @PostMapping
-    public Item createItem(@RequestBody Item item){
+    public Item createItem(@RequestBody Item item) {
         return itemService.createItem(item);
     }
 
-    @PutMapping ("/{id}")
-    public Item updateItem(@PathVariable Long id, @RequestBody Item itemDetails){
+    @PutMapping("/{id}")
+    public Item updateItem(@PathVariable Long id, @RequestBody Item itemDetails) {
         return itemService.updateItem(id, itemDetails);
     }
 
     @DeleteMapping("/{id}")
-    public void deleteItem(@PathVariable Long id){
+    public void deleteItem(@PathVariable Long id) {
         itemService.deleteItem(id);
     }
-
-
-
-
 }
