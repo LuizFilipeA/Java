@@ -1,0 +1,30 @@
+05/12/2024 - Farmácia
+Versão spring boot: 2.6.8
+JDK 17
+Banco de dados MYSQL 8.0.37
+
+Dependências:
+- Spring mvc (spring web)
+- spring data jpa
+- spring dev tools
+- spring security e jwt
+
+spring initializr 
+group - Conhecimento
+artifact - farmacia
+name : Projeto de farmácia
+descrição: criação de api de farmácia com spring boot
+Maven, Java, Spring boot 3.3.1(Vai ser mudado para 2.6.8 manualmente)
+Packaging Jar
+Pacotes utilizados no processo: 
+entity: contém a entidade "item"
+repository: contém a interface "ItemRepository" extendida do JPA. 
+service: contém a classe ItemService (responsável pelos serviços do item, o crud)
+controller: contém a classe ItemController (Responsável por criar as rotas (Utilizamos API Rest)) 
+config: contém a classe do DataSource para o MySQL, username e password (configurações do banco de dados com a aplicação no spring boot)
+    *MYSQL 8.0.33 (3306)
+    * username: root
+    * password: root
+
+
+

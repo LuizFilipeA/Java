@@ -8,9 +8,9 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.Optional;
 
-//Controlador rest, criando rota na url "/api/items "
+//Controlador rest, criando rota na url "/api/itens "
 @RestController
-@RequestMapping("/api/items")
+@RequestMapping("/api/itens")
 public class ItemController {
 
     @Autowired
@@ -40,4 +40,5 @@ public class ItemController {
     public void deleteItem(@PathVariable Long id) {
         itemService.deleteItem(id);
     }
+
 }
