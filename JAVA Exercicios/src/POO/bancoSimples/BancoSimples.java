@@ -6,21 +6,17 @@ public class BancoSimples {
     private String titular;
     private float saldo =0;
 
-
     // Construtor
     public BancoSimples(){}
     public BancoSimples(String titular, float saldo){
         this.titular = titular;
         this.saldo = saldo;
-        System.out.println("Saldo: "+saldo);
     }
-
 
     //Ajustar saldo
     protected void ajustarSaldo(float valor){
         saldo=saldo+valor;
     }
-
 
     //Sacar
     protected void sacar(float saque){
@@ -40,7 +36,6 @@ public class BancoSimples {
         System.out.println("Depósito sendo realizado");
         ajustarSaldo(deposito);
     }
-
 
     //Ver saldo
     protected void getSaldo(String nome){

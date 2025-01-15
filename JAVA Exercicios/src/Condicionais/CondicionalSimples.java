@@ -1,8 +1,13 @@
 package Condicionais;
 
+import java.util.Scanner;
+
 public class CondicionalSimples {
     public static void main(String[] args) {
-        int imc = 29;
+        int imc;
+        System.out.println("Qual é o seu imc? Vamos te julgar!");
+        Scanner sc = new Scanner(System.in);
+        imc = sc.nextInt();
         if(imc<8){
             System.out.println("Você está raquítico");
         }else if (imc >= 9 && imc <= 19) {

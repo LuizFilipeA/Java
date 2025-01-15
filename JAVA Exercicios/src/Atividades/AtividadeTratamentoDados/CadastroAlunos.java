@@ -5,6 +5,7 @@ import java.util.Scanner;
 
 public class CadastroAlunos {
     public static void main(String[] args) {
+        //Crie um algoritmo que armazene o nome, a idade e a média do aluno e exiba na tela.
         //Trate exceções ao lidar com entradas inválidas.
 
         try{

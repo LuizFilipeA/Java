@@ -1,3 +1,5 @@
-public interface Animal {
+package Interface.src;
+
+public interface Animal{
     default void voar(){}
 }

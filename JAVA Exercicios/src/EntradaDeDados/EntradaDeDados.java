@@ -4,7 +4,6 @@ public class EntradaDeDados {
     public static void main(String[] args) {
         String nome;
         int idade;
-
         Scanner leitor = new Scanner(System.in);
         System.out.println("Qual seu nome?");
         nome = leitor.next();
