@@ -11,14 +11,16 @@ Os índices das listas são baseados em zero.
 É possível percorrer sequencialmente todos os elementos da lista. */
 import java.util.ArrayList;
 
-public class Array {
-    public static void main(String[] args) {
-
-        ArrayList playlist = new ArrayList<>();
-        playlist.add("Yunk Vino");
-        System.out.println(playlist.get(0));
-        playlist.add(2);
-        System.out.println(playlist.get(1));
-
+public class Musica {
+        public static void main(String[] args) {
+        ArrayList<String> playlist = new ArrayList<>();
+        playlist.add("2002");
+        playlist.add("Racionais");
+        playlist.add("Jesus chorou");
+        playlist.add("Hip-hop/rap");
+            System.out.println("Ano: " + playlist.get(0));
+            System.out.println("Artista: " + playlist.get(1));
+            System.out.println("Nome da música: " + playlist.get(2));
+            System.out.println("Gênero: "+playlist.get(3));
     }
 }
