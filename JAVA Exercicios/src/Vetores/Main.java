@@ -9,5 +9,8 @@ public class Main {
 
         //Vetor quando você só conhece o tamanho, mas ainda não sabe quais valores vão preencher o vetor.
         int[] idades2 = new int[10];
+        for  (int i=0; i<5; i++){
+            System.out.println(idades[i]);
+        }
     }
 }

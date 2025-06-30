@@ -8,13 +8,13 @@ import java.util.Scanner;
 public class Par_Impar {
     public static void main(String[] args){
         Scanner leitor = new Scanner(System.in);
-            int bino = leitor.nextInt();
-            int cino = leitor.nextInt();
-            int resultado = (cino+bino);
+            int n1 = leitor.nextInt();
+            int n2 = leitor.nextInt();
+            int resultado = (n1+n2);
             if (resultado % 2==0){
-                System.out.println("Bino");
+                System.out.println("Par");
             }else{
-                System.out.println("Cino");
+                System.out.println("Impar");
             }
     }
 }

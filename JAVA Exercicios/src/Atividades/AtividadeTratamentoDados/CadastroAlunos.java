@@ -1,5 +1,4 @@
 package Atividades.AtividadeTratamentoDados;
-
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -35,7 +34,7 @@ public class CadastroAlunos {
 
             //Exibindo resultados dos três vetores
             for (int i = 0; i < qtdalunos; i++){ // range 0 a 9 pois o índice começa na posição [0]
-                System.out.println("Nome: "+nomes[i] +" - Anos de idade: "+idades[i]+" - Média: "+medias[i]);
+                System.out.println("Nome: "+nomes[i] +" - idade: "+idades[i]+" - Média: "+medias[i]);
             }
 
         }catch (InputMismatchException ime){
