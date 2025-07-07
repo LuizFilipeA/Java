@@ -2,7 +2,7 @@ package Condicionais;
 
 import java.util.Scanner;
 
-public class CondicionalSimples {
+public class ElseIf {
     public static void main(String[] args) {
         int imc;
         System.out.println("Qual é o seu imc? Vamos te julgar!");
@@ -22,6 +22,7 @@ public class CondicionalSimples {
     }
 }
 
+//Exemplo maluco abaixo:
 // Raquítico de 0 a 8;
 // Magro de 9 a 19;
 // Esbelto de 20 a 30;
