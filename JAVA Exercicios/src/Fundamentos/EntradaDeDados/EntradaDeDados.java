@@ -4,11 +4,12 @@ public class EntradaDeDados {
     public static void main(String[] args) {
         String nome;
         int idade;
-        Scanner leitor = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         System.out.println("Qual seu nome?");
-        nome = leitor.next();
+        nome = sc.next();
         System.out.println("Qual sua idade?");
-        idade = leitor.nextInt();
-        System.out.println("Cadastrado. Nome: "+nome+" Idade: "+idade);
+        idade = sc.nextInt();
+        System.out.println("Cadastro concluido.\nNome: "+nome+"\nIdade: "+idade);
     }
 }
+
