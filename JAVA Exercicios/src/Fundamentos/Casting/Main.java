@@ -20,7 +20,7 @@ public class Main {
 
         //Exemplo De string para char
         String s = "String";
-        char c = s.charAt(0);
+        char c = s.charAt(5);
         System.out.println("Char: "+c);
 
         //Exemplo De int para string
