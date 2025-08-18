@@ -1,6 +1,4 @@
-package Atividades.BateriaExercicio2.Car.Main;
-
-import Atividades.BateriaExercicio2.Car.Car.Car;
+package Atividades.BateriaExercicio2.Car;
 
 public class Main {
     public static void main(String[] args) {
