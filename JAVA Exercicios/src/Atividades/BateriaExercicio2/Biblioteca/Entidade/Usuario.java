@@ -9,7 +9,7 @@ public class Usuario {
     }
 
     public void alugarLivro(Livro livroemprestado){
-        if (livroemprestado==null){
+        if (livroemprestado.isDisponivel()){
             System.out.println("Você alugou o livro "+livroemprestado.getTitulo());
             livroemprestado.setDisponivel(false);
         }
@@ -19,9 +19,11 @@ public class Usuario {
     }
 
     public void devolverLivro(Livro livroemprestado){
-        if (livroemprestado != null){
+        if (!livroemprestado.isDisponivel()){ // ! se for DIFERENTE de true, if it is false
             System.out.println("Você devolveu o livro "+livroemprestado.getTitulo());
             livroemprestado.setDisponivel(true);
         }
     }
+
+
 }
