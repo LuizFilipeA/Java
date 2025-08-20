@@ -1,9 +1,9 @@
 package Atividades.BateriaExercicio2.Biblioteca.Entidade;
 
 public class Livro {
-    String titulo;
-    String autor;
-    boolean disponivel;
+    private String titulo;
+    private String autor;
+    private boolean disponivel;
 
 
     public Livro(String titulo, String autor) {
@@ -34,5 +34,10 @@ public class Livro {
 
     public void setAutor(String autor) {
         this.autor = autor;
+    }
+
+    @Override
+    public String toString() {
+        return "Livro {"+"titulo "+titulo+"autor "+autor+"disponivel= "+disponivel+"}";
     }
 }
