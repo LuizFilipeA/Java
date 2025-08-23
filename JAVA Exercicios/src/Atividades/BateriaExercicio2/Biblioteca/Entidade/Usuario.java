@@ -8,6 +8,22 @@ public class Usuario {
         this.nome = nome;
     }
 
+    public Livro getLivroemprestado() {
+        return livroemprestado;
+    }
+
+    public void setLivroemprestado(Livro livroemprestado) {
+        this.livroemprestado = livroemprestado;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
     public void alugarLivro(Livro livroemprestado){
         if (livroemprestado.isDisponivel()){
             System.out.println("Você alugou o livro "+livroemprestado.getTitulo());
