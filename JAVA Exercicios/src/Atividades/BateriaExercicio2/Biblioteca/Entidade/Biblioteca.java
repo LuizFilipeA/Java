@@ -1,12 +1,8 @@
 package Atividades.BateriaExercicio2.Biblioteca.Entidade;
 
-import POO.Biblioteca.Livro;
-import POO.Biblioteca.Usuario;
+import POO.Biblioteca.User;
 
 import java.util.ArrayList;
-import java.util.Scanner;
-
-Scanner
 
 public class Biblioteca {
 
@@ -36,14 +32,23 @@ public class Biblioteca {
 
     public void adicionarLivro(Livro livro){
         livros.add(livro);
+        System.out.println("Livro: "+livro.getTitulo()+" foi adicionado com sucesso!");
     }
 
-    public void buscarLivro(String nome){
-        for ()
+    public void buscarLivro(String titulo){
+        for (Livro livro: livros){
+            if (titulo.equals(livro.getTitulo())){
+                System.out.println("Livro: "+livro.getTitulo()+" Autor: "+livro.getAutor());
+            }
+        }
     }
 
     public void buscarUsuario(Usuario usuario){
-        if (usuario.getNomeUsuario().equals())
+        for (Usuario user: usuarios){
+            if (user==usuario){
+                System.out.println("Usuario: "+usuario.getNome()+" Livro emprestado: "+usuario.getLivroemprestado());
+            }
+        }
     }
 
 }
