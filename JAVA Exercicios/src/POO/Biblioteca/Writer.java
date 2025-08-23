@@ -1,14 +1,14 @@
 package POO.Biblioteca;
 
-public class Autor {
+public class Writer {
 
     //Atributos
     public String nomeAutor;
     //Construtor1
-    public Autor(){
+    public Writer(){
     }
     //Construtor2
-    public Autor(String nomeAutor){
+    public Writer(String nomeAutor){
         this.nomeAutor = nomeAutor;
     }
     //Getters e Setters

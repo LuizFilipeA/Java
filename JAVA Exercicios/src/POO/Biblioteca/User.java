@@ -1,13 +1,13 @@
 package POO.Biblioteca;
 
-public class Usuario {
+public class User {
     //Atributos
     long idUsuario=0;
     String nomeUsuario;
 
     //Construtores
-    public Usuario(){}
-    public Usuario(long idUsuario, long telefone, String nomeUsuario){}
+    public User(){}
+    public User(long idUsuario, long telefone, String nomeUsuario){}
 
     public long getIdUsuario() {
         return idUsuario;

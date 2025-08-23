@@ -4,26 +4,26 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class Livro {
+public class Book {
     //Atributos
     long idLivro =0;
     String nomeLivro;
     int quantidade; // Gerenciamento de estoque
-    Autor nomeAutor;
+    Writer nomeWriter;
     boolean disponivel;
-    Usuario Usuario;
+    User User;
 
     //Construtor
-    public Livro(){
-        this.nomeAutor = new Autor();
-        this.Usuario = new Usuario();
+    public Book(){
+        this.nomeWriter = new Writer();
+        this.User = new User();
     }
 
     //Criando Lista de livros chamada "livros" adicionados
-    List<Livro> livros = new ArrayList<>();
+    List<Book> books = new ArrayList<>();
 
     //Criando Lista de livros que cada usuário pegou emprestado
-    List<Livro> livrosEmprestado = new ArrayList<>();
+    List<Book> livrosEmprestado = new ArrayList<>();
 
     //Getters e Setters
     public long getIdLivro() {
@@ -32,11 +32,11 @@ public class Livro {
     public void setIdLivro(long idLivro) {
         this.idLivro = idLivro;
     }
-    public List<Livro> getLivros() {
-        return this.livros;
+    public List<Book> getLivros() {
+        return this.books;
     }
-    public void setLivros(List<Livro> livros) {
-        this.livros = livros;
+    public void setLivros(List<Book> books) {
+        this.books = books;
     }
     public String getNomeLivro() {
         return this.nomeLivro;
@@ -44,11 +44,11 @@ public class Livro {
     public void setNomeLivro(String nomeLivro) {
         this.nomeLivro = nomeLivro;
     }
-    public Autor getNomeAutor() {
-        return nomeAutor;
+    public Writer getNomeAutor() {
+        return nomeWriter;
     }
-    public void setNomeAutor(Autor nomeAutor) {
-        this.nomeAutor = nomeAutor;
+    public void setNomeAutor(Writer nomeWriter) {
+        this.nomeWriter = nomeWriter;
     }
     public int getQuantidade() {
         return quantidade;
@@ -62,11 +62,11 @@ public class Livro {
     public void setDisponivel(boolean disponivel) {
         this.disponivel = disponivel;
     }
-    public POO.Biblioteca.Usuario getUsuario() {
-        return Usuario;
+    public User getUsuario() {
+        return User;
     }
-    public void setUsuario(POO.Biblioteca.Usuario usuario) {
-        Usuario = usuario;
+    public void setUsuario(User user) {
+        User = user;
     }
 
     //imprimir livro
@@ -85,34 +85,34 @@ public class Livro {
         System.out.println("**** Adicionar livro **** ");
         Scanner sc = new Scanner(System.in);
         Scanner entradaChar = new Scanner(System.in);
-        Livro livro = new Livro();
-        Autor autor = new Autor();
-        Usuario usuario = new Usuario();
+        Book book = new Book();
+        Writer writer = new Writer();
+        User user = new User();
         while (true){
             System.out.println("Novo usuário? Já possui conta? [S/N] ");
             char validacao = entradaChar.next().charAt(0);
             if (validacao == 'S'){
-                livro.setUsuario(usuario);
+                book.setUsuario(user);
                 break;
             } else if (validacao == 'N') {
                 System.out.println("Qual é o seu nome?");
-                usuario.setNomeUsuario(sc.nextLine());
-                usuario.setIdUsuario(gerarId());
-                System.out.println("Nome: " + usuario.getNomeUsuario() + " ID:" + usuario.getIdUsuario());
-                usuarios.add(usuario);
-                livro.setUsuario(usuario);
+                user.setNomeUsuario(sc.nextLine());
+                user.setIdUsuario(gerarId());
+                System.out.println("Nome: " + user.getNomeUsuario() + " ID:" + user.getIdUsuario());
+                users.add(user);
+                book.setUsuario(user);
                 break;
             }
         }
         System.out.println("Digite o nome do livro: ");
-        livro.setNomeLivro(sc.nextLine());
-        System.out.println("Qual o nome do autor de " +livro.getNomeLivro()+ "?");
-        autor.setNomeAutor(sc.nextLine());
-        livro.setNomeAutor(autor);
-        livro.setQuantidade(1);
-        livro.setIdLivro(gerarId());
-        livro.setDisponivel(true);
-        this.livros.add(livro);
+        book.setNomeLivro(sc.nextLine());
+        System.out.println("Qual o nome do autor de " + book.getNomeLivro()+ "?");
+        writer.setNomeAutor(sc.nextLine());
+        book.setNomeAutor(writer);
+        book.setQuantidade(1);
+        book.setIdLivro(gerarId());
+        book.setDisponivel(true);
+        this.books.add(book);
         System.out.println("Livro adicionado com sucesso!");
     }
 
@@ -121,9 +121,9 @@ public class Livro {
         Scanner sc = new Scanner(System.in);
         System.out.println("Qual o id do livro a ser removido?");
         long idRemove = sc.nextLong();
-        for (Livro livro: livros) {
-            if (livro.idLivro == idRemove) {
-                livros.remove(livro);
+        for (Book book : books) {
+            if (book.idLivro == idRemove) {
+                books.remove(book);
                 System.out.println("Livro removido com sucesso");
                 break;
             } else {
@@ -140,15 +140,15 @@ public class Livro {
             listaLivros();
             System.out.println("Qual o ID do livro que você deseja pegar emprestado?");
             long idEmprestimo = sc.nextLong();
-            for (Livro livro : livros) {
-                if (livro.idLivro == idEmprestimo) {
-                    if(livro.quantidade == 1){
-                        livro.quantidade = -1;
-                        livrosEmprestado.add(livro);
+            for (Book book : books) {
+                if (book.idLivro == idEmprestimo) {
+                    if(book.quantidade == 1){
+                        book.quantidade = -1;
+                        livrosEmprestado.add(book);
                         System.out.println("Livro retirado com sucesso!");
                         condicao = false;
-                    } else if (livro.quantidade <= 0) {
-                        livro.quantidade = 0;
+                    } else if (book.quantidade <= 0) {
+                        book.quantidade = 0;
                         System.out.println("Livro indisponível. \nQuantidade insuficiente. ");
                     }
                 } else {
@@ -161,8 +161,8 @@ public class Livro {
     //Lista de livros
     public void listaLivros(){
         System.out.println("Livros disponíveis: ");
-        for (Livro livro: livros){
-            System.out.println("ID "+livro.getIdLivro()+" ,"+livro.getNomeLivro()+" ,"+livro.getNomeAutor().getNomeAutor()+" Quantidade: "+livro.getQuantidade());
+        for (Book book : books){
+            System.out.println("ID "+ book.getIdLivro()+" ,"+ book.getNomeLivro()+" ,"+ book.getNomeAutor().getNomeAutor()+" Quantidade: "+ book.getQuantidade());
         }
     }
 
@@ -171,35 +171,35 @@ public class Livro {
     //Exibir histórico
     public void exibirHistorico(){
         System.out.println("Histórico da biblioteca: ");
-        for (Livro livro: livros){
-            System.out.println("ID "+livro.getIdLivro()+" ,"+livro.getNomeLivro()+" ,"+livro.getNomeAutor().getNomeAutor()+" Quantidade: "+livro.getQuantidade() +" Gerado pelo ID: "+livro.getUsuario().getIdUsuario()+" ,"+livro.getUsuario().getNomeUsuario());
+        for (Book book : books){
+            System.out.println("ID "+ book.getIdLivro()+" ,"+ book.getNomeLivro()+" ,"+ book.getNomeAutor().getNomeAutor()+" Quantidade: "+ book.getQuantidade() +" Gerado pelo ID: "+ book.getUsuario().getIdUsuario()+" ,"+ book.getUsuario().getNomeUsuario());
         }
     }
 
 
     // Usuário
     //Lista de todos usuários
-    List<Usuario> usuarios = new ArrayList<>();
+    List<User> users = new ArrayList<>();
 
     //Cadastro usuário
     public void cadastroUsuario() {
         Scanner sc = new Scanner(System.in);
-        Usuario usuario = new Usuario();
+        User user = new User();
         System.out.println("Seja bem vindo a biblioteca!");
         System.out.println("Qual é o seu nome?");
-        usuario.setNomeUsuario(sc.nextLine());
+        user.setNomeUsuario(sc.nextLine());
         //Cadastrando ID
-        usuario.setIdUsuario(gerarId());
-        System.out.println("Usuário cadastrado com sucesso." + "Nome: " + usuario.getNomeUsuario() + " ID:" + usuario.getIdUsuario());
-        usuarios.add(usuario);
+        user.setIdUsuario(gerarId());
+        System.out.println("Usuário cadastrado com sucesso." + "Nome: " + user.getNomeUsuario() + " ID:" + user.getIdUsuario());
+        users.add(user);
     }
 
     //Exibir usuários
     protected void listaUsuarios(){
         System.out.println("Lista de usuários:");
         // Para cada usuário da classe Usuario dentro da lista usuarios
-        for (Usuario usuario : usuarios) {
-            System.out.println("Nome " + usuario.getNomeUsuario() + " ID" + usuario.getIdUsuario());
+        for (User user : users) {
+            System.out.println("Nome " + user.getNomeUsuario() + " ID" + user.getIdUsuario());
         }
     }
 }

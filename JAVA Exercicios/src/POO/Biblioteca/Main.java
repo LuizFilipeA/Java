@@ -6,9 +6,9 @@ public class Main {
 
     public static void main(String[] args) {
         //Declaracoes e referencias do menu
-        Livro livro = new Livro();
-        Autor autor = new Autor();
-        Usuario usuario = new Usuario();
+        Book book = new Book();
+        Writer writer = new Writer();
+        User user = new User();
         while(true) {
             Scanner sc = new Scanner(System.in);
             System.out.println("O que deseja fazer?");
@@ -23,19 +23,19 @@ public class Main {
             System.out.println("9- Sair");
             int decisaoMenu = sc.nextInt();
             if (decisaoMenu == 1) {
-                livro.adicionarLivro();
+                book.adicionarLivro();
             } else if (decisaoMenu == 2) {
-                livro.removerLivro();
+                book.removerLivro();
             } else if (decisaoMenu == 3) {
-                livro.pegarEmprestado();
+                book.pegarEmprestado();
             } else if (decisaoMenu == 4) {
                 System.out.println("Devolvendo livro... Função incompleta");
             } else if (decisaoMenu == 5) {
-                livro.listaLivros();
+                book.listaLivros();
             } else if (decisaoMenu == 6) {
-                livro.exibirHistorico();
+                book.exibirHistorico();
             }else if (decisaoMenu == 7) {
-                livro.cadastroUsuario();
+                book.cadastroUsuario();
             }else if (decisaoMenu == 8) {
                 break;
             }else if (decisaoMenu == 9) {
