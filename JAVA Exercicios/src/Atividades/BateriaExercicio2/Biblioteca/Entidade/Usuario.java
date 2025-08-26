@@ -26,18 +26,20 @@ public class Usuario {
 
     public void alugarLivro(Livro livroemprestado){
         if (livroemprestado.isDisponivel()){
-            System.out.println("Você alugou o livro "+livroemprestado.getTitulo());
             livroemprestado.setDisponivel(false);
+            System.out.println(nome+"Você alugou o livro "+livroemprestado.getTitulo());
         }
         else {
-            System.out.println("Devolva um livro para pegar outro emprestado");
+            System.out.println(livroemprestado.getTitulo()+" não está disponível");
         }
     }
 
-    public void devolverLivro(Livro livroemprestado){
+    public void devolverLivro(){
         if (!livroemprestado.isDisponivel()){ // ! se for DIFERENTE de true, if it is false
-            System.out.println("Você devolveu o livro "+livroemprestado.getTitulo());
             livroemprestado.setDisponivel(true);
+            System.out.println("Você devolveu o livro "+livroemprestado.getTitulo());
+        }else{
+            System.out.println("Não há nenhum livro para devolver");
         }
     }
 
