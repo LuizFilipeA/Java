@@ -30,25 +30,31 @@ public class Biblioteca {
         this.usuarios = usuarios;
     }
 
+    public void adicionarUsuario(Usuario usuario){
+        usuarios.add(usuario);
+        System.out.println("Usuário cadastrado: "+usuario.getNome());
+    }
+
     public void adicionarLivro(Livro livro){
         livros.add(livro);
         System.out.println("Livro: "+livro.getTitulo()+" foi adicionado com sucesso!");
     }
 
-    public void buscarLivro(String titulo){
+    public Livro buscarLivro(String titulo){
         for (Livro livro: livros){
             if (titulo.equals(livro.getTitulo())){
-                System.out.println("Livro: "+livro.getTitulo()+" Autor: "+livro.getAutor());
+                return livro;
             }
         }
+        return null;
     }
 
-    public void buscarUsuario(Usuario usuario){
-        for (Usuario user: usuarios){
-            if (user==usuario){
-                System.out.println("Usuario: "+usuario.getNome()+" Livro emprestado: "+usuario.getLivroemprestado());
+    public Usuario buscarUsuario(String nome){
+        for (Usuario usuario: usuarios){
+            if (usuario.getNome().equals(nome)){
+                return usuario;
             }
         }
+        return null;
     }
-
 }
