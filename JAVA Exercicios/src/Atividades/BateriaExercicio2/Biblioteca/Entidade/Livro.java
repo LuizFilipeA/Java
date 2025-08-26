@@ -12,7 +12,7 @@ public class Livro {
         this.disponivel = true;
     }
 
-    String getTitulo(){
+    public String getTitulo(){
         return titulo;
     }
 
