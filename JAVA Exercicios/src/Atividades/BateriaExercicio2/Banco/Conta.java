@@ -1,5 +1,7 @@
 package Atividades.BateriaExercicio2.Banco;
 
+import org.testng.collections.Objects;
+
 public class Conta {
     double saldo = 0;
 
@@ -16,7 +18,18 @@ public class Conta {
         destinatario.deposito(quantia);
     }
 
-    public void mostrarSaldo(){
-        System.out.println("Saldo R$: "+saldo);
+    @Override
+    public String toString(){
+        return ("Saldo: R$ "+getSaldo());
     }
+
+    public double getSaldo() {
+        return saldo;
+    }
+
+    public void setSaldo(double saldo) {
+        this.saldo = saldo;
+    }
+
+
 }
