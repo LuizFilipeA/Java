@@ -7,21 +7,35 @@ public class Main {
         Biblioteca biblioteca = new Biblioteca();
         Scanner sc = new Scanner(System.in);
 
+        //"Menu"
         while (true){
-            System.out.println("1- Adicionar usuário \n2- Adicionar livro \n3- Sair");
-            byte opcao = sc.nextByte();
-            
-            if(opcao == 1){
-                System.out.println("Adicionar usuário");
-            } else if (opcao == 2) {
-                System.out.println("Adicionar livro");
-            } else if (opcao == 3) {
-                break;
-            }else{
-                System.out.println("Opção inválida");
-            }
+            System.out.println("1 - Alugar livro");
+            System.out.println("2 - Devolver livro");
+            System.out.println("3 - Sair");
+            System.out.println("Escolha uma opção: ");
+            int opcao = sc.nextInt();
+            sc.nextLine(); // Consumir nova linha
 
+            if (opcao == 1){
+                System.out.println("Digite o nome do usuário: ");
+                String nomeUsuario = sc.nextLine();
+                Usuario usuario = biblioteca.buscarUsuario(nomeUsuario);
+                if (nomeUsuario != null){
+                    System.out.println("Digite o título do livro: ");
+                    String tituloLivro = sc.nextLine();
+                    Livro livro = biblioteca.buscarLivro(tituloLivro);
+
+                    if (livro != null){
+                        usuario.alugarLivro(livro);
+                    }else{
+                        System.out.println("Livro não encontrado");
+                    }
+                }else {
+                    System.out.println("Usuário não encontrado");
+                }
+            } else if (opcao == 2) {
+                System.out.println("Aqui vem a lógica");
+            }
         }
-        System.out.println("Fechando...");
     }
 }
