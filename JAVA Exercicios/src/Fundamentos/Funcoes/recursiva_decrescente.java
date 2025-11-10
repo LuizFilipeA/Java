@@ -1,4 +1,4 @@
-package Funcoes;
+package Fundamentos.Funcoes;
 
 public class recursiva_decrescente {
     public static int intervalo(int a, int b){

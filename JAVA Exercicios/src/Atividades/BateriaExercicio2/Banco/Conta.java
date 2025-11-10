@@ -1,7 +1,5 @@
 package Atividades.BateriaExercicio2.Banco;
 
-import org.testng.collections.Objects;
-
 public class Conta {
     double saldo = 0;
 
@@ -10,7 +8,7 @@ public class Conta {
     }
 
     public void saque(double quantia){
-        this.saldo = saldo + quantia;
+        this.saldo = saldo - quantia;
     }
 
     public void transferir(Conta destinatario, double quantia){

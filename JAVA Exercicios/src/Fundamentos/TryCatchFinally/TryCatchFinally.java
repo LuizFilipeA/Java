@@ -7,7 +7,7 @@ public class TryCatchFinally {
     public static void main(String[] args) {
 
         //Declarações
-        String str = "null"; // Null não possui posição de memória alocada
+        String str = "null"; // "null" sem aspas não possui posição de memória alocada, não inicializada
         String s ="ABC";
         int x;
         int a;
@@ -24,7 +24,7 @@ public class TryCatchFinally {
             System.out.println("Tamanho da variável str: "+str.length());
 
             //Erro de resto de divisão por zero (ArithmeticException)
-            x = 10/1;
+            x = 10/0;
             System.out.println("Resultado da divisão x é: "+x);
 
             // Erro consultando um index que não existe na memória (IndexOutOfBoundsException)
@@ -33,7 +33,7 @@ public class TryCatchFinally {
             // Utilizaremos o exception, porém o nome do erro é InputMismatchException
             System.out.println("Número inteiro da variável a: "+a);
 
-            // Catch recebe como parametro o nome do erro apresentado e logo após, nós nomeamos o nome dessa função catch,
+            // Catch recebe como parametro o nome da exception apresentada e logo após, nós nomeamos o nome dessa função catch,
             // neste caso, escolhemos npe como nome
 
         }catch (NullPointerException npe){

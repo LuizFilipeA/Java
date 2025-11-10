@@ -7,7 +7,7 @@
 /// Passo 3: Peça que o usuário informe o valor do número fatorial da escolha dele
 /// Passo 4: Retorne o valor com a lógica
 
-package Funcoes;
+package Fundamentos.Funcoes;
 import java.util.Scanner;
 
 public class fatorial_recursiva {

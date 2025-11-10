@@ -1,4 +1,4 @@
-package Funcoes;
+package Fundamentos.Funcoes;
 import java.util.Scanner;
 
 public class Recursiva_fibonacci {

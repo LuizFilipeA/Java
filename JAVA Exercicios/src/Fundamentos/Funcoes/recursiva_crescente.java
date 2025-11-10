@@ -1,4 +1,4 @@
-package Funcoes;
+package Fundamentos.Funcoes;
 
 public class recursiva_crescente {
 
