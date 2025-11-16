@@ -1,4 +1,4 @@
-package Atividades.BateriaExercicio2.Biblioteca.Entidade;
+package AtividadesCurso.BateriaExercicio2.Biblioteca.Entidade;
 
 public class Livro {
     private String titulo;

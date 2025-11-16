@@ -1,4 +1,4 @@
-package Atividades.BateriaExercicio2.Banco;
+package AtividadesCurso.BateriaExercicio2.Banco;
 
 public class Conta {
     double saldo = 0;

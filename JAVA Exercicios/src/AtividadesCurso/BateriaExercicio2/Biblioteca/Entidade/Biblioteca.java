@@ -1,6 +1,4 @@
-package Atividades.BateriaExercicio2.Biblioteca.Entidade;
-
-import POO.Biblioteca.User;
+package AtividadesCurso.BateriaExercicio2.Biblioteca.Entidade;
 
 import java.util.ArrayList;
 

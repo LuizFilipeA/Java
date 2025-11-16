@@ -2,7 +2,7 @@
 // Entrada = Apenas 1 scanner pra coletar o x
 // A saída do seu programa deve conter apenas uma linha com os divisores de
 // 2≤X≤1000000000
-package Atividades.BateriaExercicios;
+package AtividadesCurso.BateriaExercicios;
 import java.util.Scanner;
 public class Todos_Divisores {
     public static void main(String[] args){

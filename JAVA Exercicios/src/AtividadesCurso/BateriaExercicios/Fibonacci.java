@@ -1,4 +1,4 @@
-package Atividades.BateriaExercicios;
+package AtividadesCurso.BateriaExercicios;
 
 import java.util.Scanner;
 

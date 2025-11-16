@@ -1,4 +1,4 @@
-package Atividades.AtividadeTratamentoDados;
+package AtividadesCurso.AtividadeTratamentoDados;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 

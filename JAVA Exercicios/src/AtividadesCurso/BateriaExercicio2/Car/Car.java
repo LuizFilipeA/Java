@@ -1,4 +1,4 @@
-package Atividades.BateriaExercicio2.Car;
+package AtividadesCurso.BateriaExercicio2.Car;
 
 
 //  1ª tarefa: Carros - Crie uma classe chamada "Carro" que tenha

@@ -1,4 +1,4 @@
-package Atividades.BateriaExercicio2.Car;
+package AtividadesCurso.BateriaExercicio2.Car;
 
 public class Main {
     public static void main(String[] args) {
