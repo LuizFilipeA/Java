@@ -7,14 +7,19 @@ import java.util.List;
 public class ContainArrayList {
 
     public static void main(String[] args) {
+
+        //Declarando a ArrayList chamada frutas
         List<String> frutas= new ArrayList<>();
+
+        //Declaração de variáveis
+        boolean temBanana = frutas.contains("Morango");
+        boolean temUva = frutas.contains("Uva");
+
+        //Adicionando frutas
         frutas.add("Maçã");
         frutas.add("Mamão");
         frutas.add("Morango");
         frutas.add("Banana");
-
-        boolean temBanana = frutas.contains("Morango");
-        boolean temUva = frutas.contains("Uva");
 
         System.out.println("Tem banana?"+ temBanana);
         System.out.println("Tem uva? "+ temUva);
