@@ -8,8 +8,7 @@ public class Main {
 
         System.out.println("Qual seu nome?");
         String titular = sc.next();
-        System.out.println("Com qual valor iremos iniciar a conta? ");
-        float valor = sc.nextFloat();
+        float valor = 0; //valor, na verdade é uma referencia a valor inicial da conta
         BancoSimples bs = new BancoSimples(titular, valor);
 
         while (true){
