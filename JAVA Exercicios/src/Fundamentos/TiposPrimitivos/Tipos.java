@@ -1,4 +1,4 @@
-package Fundamentos.Tipos;
+package Fundamentos.TiposPrimitivos;
 
 public class Tipos {
 
@@ -10,4 +10,12 @@ public class Tipos {
     double n6; //double: Um número de ponto flutuante de 64 bits
     char letra; //char: UM caractere Unicode de 16 bits.
     boolean isTrue; //boolean: Um valor booleano, podendo ser true ou false
+
+    //Bonus: VAR só pode ser usado para variáveis locais inicializadas na mesma linha
+    public static void main(String[] args) {
+        var nome = "Luiz Filipe"; //Reconhecendo uma string sem precisar declarar explicitamente
+        System.out.println(nome);
+        var idade = 26; //Reconhecendo um decimal sem precisar declarar explicitamente
+        System.out.println(idade);
+    }
 }
