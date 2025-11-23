@@ -1,4 +1,4 @@
-package POO.Heranca;
+package POO.Heranca.HerancaSimples;
 
 import static java.lang.Math.abs;
 

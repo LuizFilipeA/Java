@@ -1,4 +1,4 @@
-package POO.Heranca;
+package POO.Heranca.HerancaSimples;
 
 public class Funcionario {
     String nome;
