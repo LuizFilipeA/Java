@@ -1,5 +1,7 @@
 package POO.Heranca.ClasseAbstrata;
 
+import javax.imageio.stream.ImageInputStream;
+
 public class Pagamento1 extends FormasPagamento{
 
     //Em uma interface eu seria obrigado a implementar todos os métodos existentes "no contrato" porém, poderia implementar quantos "contratos eu quisesse"
@@ -12,4 +14,5 @@ public class Pagamento1 extends FormasPagamento{
         para construtores, super.metodo() para métodos, e super.variavel para variáveis. */
 
     }
+
 }

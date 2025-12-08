@@ -9,6 +9,5 @@ public class Vetor {
         //Declarando um vetor de bytes com tamanho 2, com valor 0 e 1
         byte[] bytes = {0, 1};
 
-
     }
 }
