@@ -1,8 +1,10 @@
-package Fundamentos.TryCatchFinally;
+package Fundamentos.TratamentoExcecoes.TryCatchFinally;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+
+//
 public class TryCatchFinally {
     public static void main(String[] args) {
 
@@ -21,29 +23,27 @@ public class TryCatchFinally {
             a = sc.nextInt();
 
             // Erro consultando um index que não existe na memória (NullPointerException)
-            System.out.println("Tamanho da variável str: "+str.length());
+            System.out.println("Tamanho da variável str(null = 4 letras): "+str.length());
 
-            //Erro de resto de divisão por zero (ArithmeticException)
-            x = 10/0;
+            //Erro de resto de divisão por zero (ArithmeticException) ( altere o numero apos a barra por 0_
+            x = 10/1;
             System.out.println("Resultado da divisão x é: "+x);
 
-            // Erro consultando um index que não existe na memória (IndexOutOfBoundsException)
-            System.out.println("Acessando posição 5 da String s: "+s.charAt(2));
+            // Erro consultando um index que não existe na memória (IndexOutOfBoundsException) = passe um parametro maior que 3
+            System.out.println("Acessando posição 5 da String s(ABC): "+s.charAt(1));
 
-            // Utilizaremos o exception, porém o nome do erro é InputMismatchException
+            // InputMismatchException = ocorre quando o metodo Scanner espera um tipo de dado específico (como int, double) e o usuário insere um valor de tipo diferente
             System.out.println("Número inteiro da variável a: "+a);
 
-            // Catch recebe como parametro o nome da exception apresentada e logo após, nós nomeamos o nome dessa função catch,
-            // neste caso, escolhemos npe como nome
-
+            // neste caso, escolhemos npe como nome, Catch recebe como parametro o nome da exception apresentada e logo após, nós nomeamos o nome dessa função catch,
         }catch (NullPointerException npe){
             System.err.println("A variável não possui valor atribuido");
         }catch (ArithmeticException ae){
             System.err.println("Não é possível realizar uma divisão por 0.");
         }catch (IndexOutOfBoundsException siobe){
-            System.out.println("Acesso negado,posição de memória inválida.");
+            System.err.println("Acesso negado,posição de memória inválida.");
         }catch (InputMismatchException ime){
-            System.out.println("Informe um número inteiro. ");
+            System.err.println("Informe um número inteiro. ");
         }finally {
             System.out.println("Fechando o programa...");
         }
