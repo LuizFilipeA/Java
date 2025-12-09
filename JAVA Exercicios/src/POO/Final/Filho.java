@@ -1,4 +1,4 @@
-package Fundamentos.Final;
+package POO.Final;
 
 public class Filho extends Pai{
     /*um atributo final é semelhante á uma constante, não poderá ser alterada nem mesmo com herança e polimorfismo.

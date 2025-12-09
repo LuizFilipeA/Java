@@ -1,4 +1,4 @@
-package Fundamentos.Final;
+package POO.Final;
 
 public class Pai {
     public final int x = 10; //constante

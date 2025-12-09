@@ -1,4 +1,4 @@
-package Fundamentos.Static;
+package POO.Static;
 
 public class Teste_Static {
     //Criamos alguns métodos e atributos, mas apenas o metodo "TestandoChamada() está estático

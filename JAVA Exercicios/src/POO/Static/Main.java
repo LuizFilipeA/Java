@@ -1,4 +1,4 @@
-package Fundamentos.Static;
+package POO.Static;
 
 public class Main {
     //metodo main é um "executável" e estático, logo qualquer outro atributo ou metodo para ser referenciado/utilizado necessariamente precisa ser static também.
