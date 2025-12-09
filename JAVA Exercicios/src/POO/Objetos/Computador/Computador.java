@@ -1,4 +1,4 @@
-package POO.Computador;
+package POO.Objetos.Computador;
 
 public class Computador {
     public boolean liga = false;

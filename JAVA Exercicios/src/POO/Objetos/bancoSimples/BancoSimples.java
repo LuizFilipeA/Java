@@ -1,4 +1,4 @@
-package POO.bancoSimples;
+package POO.Objetos.bancoSimples;
 
 public class BancoSimples {
 

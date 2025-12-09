@@ -1,4 +1,4 @@
-package POO.Carro;
+package POO.Objetos.Carro;
 
 public class Carro {
     /// 2) que tenha atributos como "marca", "modelo" e "ano"
