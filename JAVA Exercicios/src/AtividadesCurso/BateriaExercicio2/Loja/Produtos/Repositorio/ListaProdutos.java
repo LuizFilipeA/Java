@@ -16,7 +16,7 @@ public class ListaProdutos {
 
 
     public void removerProduto(Integer id){
-        /
+
         produtos.removeIf(produto -> id.equals(produto.getId()));
     }
 }
