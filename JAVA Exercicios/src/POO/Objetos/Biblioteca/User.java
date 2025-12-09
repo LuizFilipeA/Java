@@ -1,4 +1,4 @@
-package POO.Biblioteca;
+package POO.Objetos.Biblioteca;
 
 public class User {
     //Atributos

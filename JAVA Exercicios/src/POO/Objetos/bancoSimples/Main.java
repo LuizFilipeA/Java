@@ -1,4 +1,4 @@
-package POO.bancoSimples;
+package POO.Objetos.bancoSimples;
 
 import java.util.Scanner;
 
