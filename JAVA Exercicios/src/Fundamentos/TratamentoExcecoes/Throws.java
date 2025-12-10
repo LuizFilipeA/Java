@@ -1,6 +1,6 @@
 //Throws (lançar) é a personalização no tratamento de dados
 
-package Fundamentos.TratamentoExcecoes.TryCatchFinally;
+package Fundamentos.TratamentoExcecoes;
 
 //Use throws na assinatura do metodo para declarar que ele pode lançar uma exceção (exceções verificadas) e delegar o tratamento ao chamador "Throw
 public class Throws {

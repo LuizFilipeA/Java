@@ -1,4 +1,4 @@
-package Fundamentos.TratamentoExcecoes.TryCatchFinally;
+package Fundamentos.TratamentoExcecoes;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
