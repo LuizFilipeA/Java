@@ -1,4 +1,4 @@
-package Fundamentos.Vetores;
+package EstruturaDados.Vetores;
 //Em Java, vetores são estruturas de dados que armazenam um conjunto de valores do mesmo tipo. Também são conhecidos como arrays.
 
 public class Main {
