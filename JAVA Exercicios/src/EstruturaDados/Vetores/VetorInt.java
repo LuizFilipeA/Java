@@ -1,6 +1,6 @@
 package EstruturaDados.Vetores;
 
-public class Vetor {
+public class VetorInt {
     public static void main(String[] args) {
 
         //Declarando um vetor de inteiros de tamanho 5, sem declarar os 5 inteiros
