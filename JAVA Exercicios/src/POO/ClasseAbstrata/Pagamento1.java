@@ -1,6 +1,4 @@
-package POO.Heranca.ClasseAbstrata;
-
-import javax.imageio.stream.ImageInputStream;
+package POO.ClasseAbstrata;
 
 public class Pagamento1 extends FormasPagamento{
 

@@ -1,4 +1,4 @@
-package POO.Heranca.ClasseAbstrata;
+package POO.ClasseAbstrata;
 
 public abstract class FormasPagamento {
 
