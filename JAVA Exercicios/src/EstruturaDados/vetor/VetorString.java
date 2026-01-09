@@ -1,4 +1,4 @@
-package EstruturaDados.Vetores;
+package EstruturaDados.vetor;
 
 public class VetorString {
     public static void main(String[] args) {

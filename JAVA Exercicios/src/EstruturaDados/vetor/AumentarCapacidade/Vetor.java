@@ -1,4 +1,4 @@
-package EstruturaDados.Vetores.AumentarCapacidade;
+package EstruturaDados.vetor.AumentarCapacidade;
 
 public class Vetor {
 
