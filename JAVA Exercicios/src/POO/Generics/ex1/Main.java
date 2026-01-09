@@ -1,4 +1,4 @@
-package POO.Generics;
+package POO.Generics.ex1;
 
 public class Main {
     public static void main(String[] args) {
