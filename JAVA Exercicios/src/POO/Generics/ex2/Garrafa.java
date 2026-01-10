@@ -4,8 +4,8 @@ public class Garrafa {
 
     private String nome;
 
-    public void setNome(String nome){
-        this.nome= nome;
+    public Garrafa (String nome){
+        this.nome = nome;
     }
 
     @Override
