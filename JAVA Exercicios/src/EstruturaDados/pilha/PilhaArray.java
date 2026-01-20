@@ -19,4 +19,11 @@ public class PilhaArray {
         }
         dados[++topo] = valor; // Incrementa o topo e adiciona o valor
     }
+
+    public int pop(){
+        if(topo == -1){
+            throw new RuntimeException("Underflow: Pilha vazia");
+        }
+        return dados[topo--]; // Retorna o valor do topo e após decrementa o topo
+    }
 }
