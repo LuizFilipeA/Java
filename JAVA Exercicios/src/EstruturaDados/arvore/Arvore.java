@@ -32,19 +32,24 @@ public class Arvore {
 
     //Metodo para inserir uma nova folha na árvore binária, as condicionais fazem este código funcionar como uma árvore binária de busca
     public void inserir(Folha novo){
-        //Construção do root/raiz
+        //Se a árvore estiver vazia, insira a nova folha como a raiz
         if(isEmpty()){
             this.folha = novo;
+            System.out.println("Folha " + novo.getValor() + " inserida como raiz da árvore.");
+
+            // Se a árvore não estiver vazia,
         }else{
-            if(novo.getValor() < this.folha.getValor()){ //Se o valor da nova folha for menor que o valor da folha atual, insira na esquerda
+            if(novo.getValor() < this.folha.getValor()){ //Se o valor da nova folha for menor que o valor da folha atual
                 if(this.esquerda == null){ //Se não existir uma árvore na esquerda
-                    this.esquerda = new Arvore(novo); //Cria uma nova árvore na esquerda com a nova folha
+                    this.esquerda = new Arvore(novo); //Então cria uma nova árvore na esquerda com a nova folha
+                    System.out.println("Folha " + novo.getValor() + " inserida a esquerda de " + this.folha.getValor());
                 }else{ //Se já existir uma árvore na esquerda
                     this.esquerda.inserir(novo); //Chama o metodo inserir recursivamente na subárvore esquerda
                 }
             }else{ //Se o valor da nova folha for maior ou igual ao valor da folha atual, insira na direita
                 if(this.direita == null){ //Se não existir uma árvore na direita
                     this.direita = new Arvore(novo); //Cria uma nova árvore na direita com a nova folha
+                    System.out.println("Folha " + novo.getValor() + " inserida a direita de " + this.folha.getValor());
                 }else{ //Se já existir uma árvore na direita
                     this.direita.inserir(novo); //Chama o metodo inserir recursivamente na subárvore direita
                 }
