@@ -1,4 +1,4 @@
-package EstruturaDados.fila.priorityQueue;
+package EstruturaDados.fila.priorityQueue.minMaxHeap;
 
 import java.util.Collections;
 import java.util.PriorityQueue;
@@ -14,6 +14,8 @@ public class minMaxHeap {
         minHeap.add(30);
         minHeap.add(40);
         System.out.println(minHeap.poll()); // 10
+        System.out.println(minHeap.poll()); // 20
+        System.out.println(minHeap.peek());
 
         //Diferente do minHeap, o maxHeap recebe Collections.reverseOrder() como parâmetro para inverter a ordem dos elementos
         PriorityQueue<Integer> maxHeap = new PriorityQueue<>(Collections.reverseOrder());
@@ -24,5 +26,7 @@ public class minMaxHeap {
         maxHeap.add(-40);
 
         System.out.println(maxHeap.poll()); // 1
+        System.out.println(maxHeap.poll()); // -10
+        System.out.println(maxHeap.peek());
     }
 }
