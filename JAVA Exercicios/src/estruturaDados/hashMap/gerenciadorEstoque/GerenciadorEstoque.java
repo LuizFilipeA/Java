@@ -1,15 +1,19 @@
 package estruturaDados.hashMap.gerenciadorEstoque;
 
 import java.util.HashMap;
+import java.util.Map;
 
 public class GerenciadorEstoque {
 
+    //ATRIBUTO, a própria estrutura de dados HashMap chamada listaEstoque
     private HashMap<String, Integer> listaEstoque;
 
+    //CONSTRUTOR - Note que mesmo recebendo por parametros, nós não adicionamos nenhum produto ou quantidade aqui. Apenas inicializamos o HashMap.
     public GerenciadorEstoque(String produto, Integer quantidade){
         this.listaEstoque = new HashMap<>(); // inicializando o HashMap
     }
 
+    //ADICIONAR OU ATUALIZAR PRODUTO
     public String adicionarOuAtualizar(String produto, final Integer quantidade){
         if (quantidade <= 0){
             return "Quantidade inválida! Insira um valor positivo";
@@ -25,11 +29,30 @@ public class GerenciadorEstoque {
         }
     }
 
-    public String removerProduto(String produto){
+    //REMOVER PRODUTO
+    public String removerProduto(final String produto){
         if (listaEstoque.remove(produto) != null) {
             return "Produto " + produto + " removido com sucesso!";
         }else{
             return "Produto não encontrado.";
         }
     }
+
+    //EXIBIR TODOS OS PRODUTOS
+    public void exibirTodosProdutos(){
+        for (Map.Entry<String, Integer> entry : listaEstoque.entrySet()){
+            System.out.println("Produto: " +entry.getKey()+ " | Quantidade: " +entry.getValue());
+        }
+    }
+
+    //CONSULTA POR PRODUTO
+    public void consultarProduto(final String produto){
+        if (listaEstoque.containsKey(produto)){
+            System.out.println("Produto: " +produto+ " | Quantidade: " +listaEstoque.get(produto));
+        }else{
+            System.out.println("Produto não encontrado.");
+        }
+    }
+
+
 }
