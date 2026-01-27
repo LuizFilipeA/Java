@@ -4,15 +4,15 @@ import java.util.HashSet;
 
 public class GerenciadorDeNomes {
 
-    //Atributo = a própria "lista "
+    //o único atributo da nossa classe é a coleção do tipo HashSet, onde iremos armazenar todos os nomes.
     HashSet<String> hashNomes;
 
     //Construtor
-    public GerenciadorDeNomes(String nome){
+    public GerenciadorDeNomes(){
         this.hashNomes = new HashSet<String>();
     }
 
-    //ADICIONAR NOME
+    //ADICIONAR NOME - INSERÇÃO
     public String adicionarNome(String nome){
         if (this.hashNomes.add(nome)) { //O metodo add retorna true se o elemento foi adicionado com sucesso e false caso não seja
             return "Nome adicionado com sucesso!";
