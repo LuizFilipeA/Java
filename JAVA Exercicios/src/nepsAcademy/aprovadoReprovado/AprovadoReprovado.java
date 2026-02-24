@@ -5,8 +5,8 @@ import java.util.Scanner;
 public class AprovadoReprovado{
 
     public static void verificacao(float a, float b){
-        if (a < 0 || a <=10){
-            if (b < 0 || b <=10){
+        if (a > 0 && a <=10){
+            if (b > 0 && b <=10){
                 float resultado = media(a, b);
                 if (resultado >= 7){
                     System.out.println("Aprovado");
