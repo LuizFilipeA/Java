@@ -5,6 +5,9 @@ package poo.generics.ex3;
 
 //T é um tipo genérico. Você pode pensar assim: “O tipo será definido depois na criação/instância do objeto”.
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Caixa<T> {
 
     //Essa classe vai receber um valor
@@ -27,5 +30,12 @@ public class Caixa<T> {
         Caixa<Integer> caixa2 = new Caixa<>();
         caixa2.valor = 5;
         System.out.println(caixa2.valor);
+
+        //Já usavamos Generics na classe ArrayList, ou seja, uma lista que o tipo só será definidio na na hora de instanciar a classe,
+        // mas agora estamos criando nossa própria classe genérica, e o mais interessante é que podemos usar a mesma classe para armazenar diferentes tipos de dados,
+        // sem precisar criar uma nova classe para cada tipo de dado.
+        List<String> lista = new ArrayList<>(); //note o <>
+
+
     }
 }
