@@ -11,6 +11,10 @@ import java.util.List;
 public class Caixa<T> {
 
     //Essa classe vai receber um valor
+    private static <T> void imprimirValor(T valor) {
+        System.out.println("O valor é: " + valor);
+    }
+
     private T valor;
 
     public static void main(String[] args) {
@@ -35,6 +39,11 @@ public class Caixa<T> {
         // mas agora estamos criando nossa própria classe genérica, e o mais interessante é que podemos usar a mesma classe para armazenar diferentes tipos de dados,
         // sem precisar criar uma nova classe para cada tipo de dado.
         List<String> lista = new ArrayList<>(); //note o <>
+
+        //Utilizando o metodo statico
+
+        imprimirValor("Chamando método genérico, valor: " + caixa1.valor);
+        imprimirValor("Chamando método genérico, valor: " + caixa2.valor);
 
 
     }
