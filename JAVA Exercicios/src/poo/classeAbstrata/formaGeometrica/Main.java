@@ -17,7 +17,7 @@ public class Main  {
         formas.add(triangulo);
 
         for (FormaGeometrica forma : formas) {
-            System.out.println("Área: " + forma.calcularArea());
+            System.out.printf("Forma: %s, Area: %.2f \n", forma.getNome(), forma.calcularArea());
         }
     }
 }

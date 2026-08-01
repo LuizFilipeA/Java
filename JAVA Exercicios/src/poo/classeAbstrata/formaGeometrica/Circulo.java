@@ -4,6 +4,7 @@ public class Circulo extends FormaGeometrica{
     private double raio;
 
     public Circulo(double raio) {
+        super("Circulo");
         if (verificarPositivo(raio)) {
             this.raio = raio;
         }

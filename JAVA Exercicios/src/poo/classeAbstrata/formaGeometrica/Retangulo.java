@@ -6,6 +6,7 @@ public class Retangulo extends FormaGeometrica{
     private double altura;
 
     public Retangulo(double base, double altura) {
+        super("Retangulo");
         if (verificarPositivo(base) && verificarPositivo(altura)) {
             this.base = base;
             this.altura = altura;

@@ -6,6 +6,7 @@ public class Triangulo extends FormaGeometrica{
     private double altura;
 
     public Triangulo(double base, double altura) {
+        super("Triangulo");
         if (verificarPositivo(base) && verificarPositivo(altura)) {
             this.base = base;
             this.altura = altura;
