@@ -1,19 +1,16 @@
 package poo.classeAbstrata.formaGeometrica;
 
 public class Circulo extends FormaGeometrica{
-
-    double raio;
+    private double raio;
 
     public Circulo(double raio) {
-        this.nome = "Circulo";
-        this.area = 0;
-        this.raio = raio;
+        if (verificarPositivo(raio)) {
+            this.raio = raio;
+        }
     }
 
     @Override
-    public void calcularArea(){
-        this.area = Math.PI*Math.pow(this.raio, 2);
+    public double calcularArea() {
+        return Math.PI * raio * raio;
     }
-
-
 }
