@@ -2,38 +2,26 @@ package poo.rh.modelos;
 
 public abstract class Funcionario implements Contratado {
 
-    private String nome;
-    private String cargo;
-    private double salarioBase;
+    private final String nome;
 
-    public Funcionario(String nome, String cargo, double salarioBase){
+    protected boolean verificaPositivo(double valor){
+        return valor > 0;
+    }
 
-        if (verificaPositivo(salarioBase)) {
-            this.salarioBase = salarioBase;
-        } else {
-            throw new IllegalArgumentException("Salário base deve ser positivo");
-        }if (nome != null && !nome.isEmpty() && cargo != null && !cargo.isEmpty()){
+    protected boolean verificaString(String string){
+        return string != null && !string.isEmpty();
+    }
+
+    public Funcionario(String nome){
+        if (verificaString(nome)){
             this.nome = nome;
-            this.cargo = cargo;
+        } else {
+            throw new IllegalArgumentException("Nome não pode ser nulo ou vazio");
         }
-
-        this.cargo = cargo;
     }
 
     public String getNome() {
         return nome;
     }
 
-    public String getCargo() {
-        return cargo;
-    }
-
-    public double getPagamento() {
-        return salarioBase;
-    }
-
-    @Override
-    public boolean verificaPositivo(double valor) {
-      return !(valor <=0);
-    }
 }
