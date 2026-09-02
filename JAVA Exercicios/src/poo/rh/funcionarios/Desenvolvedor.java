@@ -4,10 +4,16 @@ import poo.rh.modelos.Funcionario;
 
 public class Desenvolvedor extends Funcionario {
 
-    double bonus;
+    private double salarioBase;
+    private double bonus;
 
     public Desenvolvedor(String nome, double salarioBase, double bonus) {
-        super(nome, "Desenvolvedor", salarioBase);
+        super(nome);
+        if (verificaPositivo(salarioBase)) {
+            this.salarioBase = salarioBase;
+        } else {
+            throw new IllegalArgumentException("Salario base deve ser positivo");
+        }
         if (verificaPositivo(bonus)) {
             this.bonus = bonus;
         } else {
@@ -17,15 +23,6 @@ public class Desenvolvedor extends Funcionario {
 
     @Override
     public double calculaPagamento() {
-        return (getPagamento() + bonus);
-    }
-
-    @Override
-    public boolean verificaPositivo(double valor) {
-        return !(valor <= 0); //Retorna true se o valor for positivo
-    }
-
-    public double getBonus() {
-        return bonus;
+        return (salarioBase + bonus);
     }
 }
