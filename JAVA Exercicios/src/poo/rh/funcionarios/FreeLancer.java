@@ -8,15 +8,17 @@ public class FreeLancer extends Funcionario {
     private double horasTrabalhadas;
 
     public FreeLancer(String nome, double valorHora, double horasTrabalhadas) {
-        super(nome, "FreeLancer", valorHora*horasTrabalhadas);
-        if (verificaPositivo(valorHora) && verificaPositivo(horasTrabalhadas)) {
+        super(nome);
+        if (verificaPositivo(valorHora)) {
             this.valorHora = valorHora;
-            this.horasTrabalhadas = horasTrabalhadas;
-        } else {
-            throw new IllegalArgumentException("Valor hora e horas trabalhadas devem ser positivos");
+        }else {
+            throw new IllegalArgumentException("Valor da hora deve ser positivo");
         }
-        this.valorHora = valorHora;
-        this.horasTrabalhadas = horasTrabalhadas;
+        if (verificaPositivo(horasTrabalhadas)) {
+            this.horasTrabalhadas = horasTrabalhadas;
+        }else {
+            throw new IllegalArgumentException("Horas trabalhadas deve ser positivo");
+        }
     }
 
     @Override
