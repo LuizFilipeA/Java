@@ -7,13 +7,17 @@ public class Consultor extends Funcionario {
     private double valorHora;
     private double horasTrabalhadas;
 
-    public Consultor(String nome, double valorHora, int horasTrabalhadas) {
-        super(nome, "Consultor", valorHora * horasTrabalhadas);
-        if (verificaPositivo(valorHora) && verificaPositivo(horasTrabalhadas)) {
+    public Consultor(String nome, double valorHora, double horasTrabalhadas) {
+        super(nome);
+        if (verificaPositivo(valorHora)) {
             this.valorHora = valorHora;
+        }else {
+            throw new IllegalArgumentException("Valor da hora deve ser positivo");
+        }
+        if (verificaPositivo(horasTrabalhadas)) {
             this.horasTrabalhadas = horasTrabalhadas;
-        }else{
-            throw new IllegalArgumentException("Valor hora e horas trabalhadas devem ser positivos");
+        }else {
+            throw new IllegalArgumentException("Horas trabalhadas deve ser positivo");
         }
     }
 
@@ -21,4 +25,7 @@ public class Consultor extends Funcionario {
     public double calculaPagamento() {
         return this.valorHora * this.horasTrabalhadas;
     }
+
+
+
 }
