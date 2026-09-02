@@ -4,6 +4,4 @@ public interface Contratado {
 
     double calculaPagamento();
 
-    boolean verificaPositivo(double valor);
-
 }
